@@ -1,5 +1,8 @@
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import controllers.LibroController;
 import models.Book;
 
 public class App {
@@ -30,6 +33,12 @@ public class App {
                 new Book("Java Avanzado", "Luis Pérez", 2019), // Duplicado
                 new Book("Ciberseguridad", "Pedro León", 2023),
                 new Book("Blockchain", "Marta Ríos", 2021),
-                new Book("Machine Learning", "Cristina Gómez", 2022));
+                new Book("Machine Learning", "Cristina Gómez", 2022)
+        );
+        LibroController controller = new LibroController();
+        Set<Book> resultado = controller.procesarLibros(libros);
+
+        System.out.println("📚 Libros procesados (ordenados y sin duplicados):");
+        resultado.forEach(System.out::println);
     }
 }
