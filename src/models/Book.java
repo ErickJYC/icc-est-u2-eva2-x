@@ -50,6 +50,10 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("%s - %s (%d)", titulo, autor, anio);
+        return "Book{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", anio=" + anio +
+                '}';
     }
 }
